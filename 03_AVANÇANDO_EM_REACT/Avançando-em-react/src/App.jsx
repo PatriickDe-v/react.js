@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import ManageData from './components/ManageData'
 import ListRender from './components/ListRender'
+import ConditionalRender from './components/ConditionalRender'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
       <div>
         <ManageData/>
         <ListRender/>
+        <ConditionalRender/>
       </div>
     </>
   )
