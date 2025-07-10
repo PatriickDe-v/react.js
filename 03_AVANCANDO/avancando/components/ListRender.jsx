@@ -11,7 +11,7 @@ const ListRender = () => {
   return (
     <div>
       <ul>
-        {list.map((user, id) => (
+        {users.map((user, id) => (
           <li key={id}>{user}</li>
         ))}
       </ul>
