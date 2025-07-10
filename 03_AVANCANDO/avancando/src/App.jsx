@@ -7,6 +7,7 @@ import ListRender from "../components/ListRender";
 import DeletUserList from "../components/DeletUserList";
 import ConditionalRender from "../components/ConditionalRender";
 import ShowUserName from "../components/ShowUserName";
+import CarDatail from "../components/CarDatail";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <DeletUserList />
         <ConditionalRender />
         <ShowUserName name="Patrick" />
+        <CarDatail brand="VW" km={10000} color="red" />
       </div>
     </>
   );
