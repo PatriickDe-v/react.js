@@ -6,6 +6,7 @@ import ManageData from "../components/ManageData";
 import ListRender from "../components/ListRender";
 import DeletUserList from "../components/DeletUserList";
 import ConditionalRender from "../components/ConditionalRender";
+import ShowUserName from "../components/ShowUserName";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <ListRender />
         <DeletUserList />
         <ConditionalRender />
+        <ShowUserName name="Patrick" />
       </div>
     </>
   );
