@@ -5,6 +5,7 @@ import "./App.css";
 import ManageData from "../components/ManageData";
 import ListRender from "../components/ListRender";
 import DeletUserList from "../components/DeletUserList";
+import ConditionalRender from "../components/ConditionalRender";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <ManageData />
         <ListRender />
         <DeletUserList />
+        <ConditionalRender />
       </div>
     </>
   );
