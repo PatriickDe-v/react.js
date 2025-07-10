@@ -17,8 +17,13 @@ function App() {
         <ListRender />
         <DeletUserList />
         <ConditionalRender />
+        {/* props */}
         <ShowUserName name="Patrick" />
-        <CarDatail brand="VW" km={10000} color="red" />
+        {/* destructuring */}
+        <CarDatail brand="VW" km={10000} color="red" newCar={false} />
+        {/* reaproveitando components */}
+        <CarDatail brand="Ford" km={0} color={"black"} newCar={true} />
+        <CarDatail brand="Fiat" km={4800} color={"orange"} newCar={false} />
       </div>
     </>
   );
