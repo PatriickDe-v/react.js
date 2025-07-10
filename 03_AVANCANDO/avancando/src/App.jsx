@@ -8,6 +8,7 @@ import DeletUserList from "../components/DeletUserList";
 import ConditionalRender from "../components/ConditionalRender";
 import ShowUserName from "../components/ShowUserName";
 import CarDatail from "../components/CarDatail";
+import Container from "../components/Container";
 
 function App() {
   const cars = [
@@ -39,6 +40,10 @@ function App() {
             newCar={car.newCar}
           />
         ))}
+        {/* children */}
+        <Container>
+          <p>Esse é o conteúdo</p>
+        </Container>
       </div>
     </>
   );
