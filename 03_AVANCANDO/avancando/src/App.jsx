@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import ManageData from "../components/ManageData";
 import ListRender from "../components/ListRender";
+import DeletUserList from "../components/DeletUserList";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div>
         <ManageData />
         <ListRender />
+        <DeletUserList />
       </div>
     </>
   );
