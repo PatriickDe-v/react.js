@@ -35,8 +35,15 @@ function App() {
       },
       body: JSON.stringify(product),
     });
-  };
 
+    // 3 - Carragamento Dinâmico
+    const addedProducts = await res.json();
+
+    setProducts((prevProducts) => [...prevProducts, addedProducts]);
+
+    setName("");
+    setPrice("");
+  };
   return (
     <div className="App">
       <h1>Lista de Produtos</h1>
