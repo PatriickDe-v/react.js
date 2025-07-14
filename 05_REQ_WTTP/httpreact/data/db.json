@@ -82,6 +82,11 @@
       "id": "bfd8",
       "name": "Cadeira",
       "price": "200"
+    },
+    {
+      "id": "4faf",
+      "name": "Headset",
+      "price": "150"
     }
   ]
 }
