@@ -1,19 +1,67 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Camisa",
-            "price": 59.9
-        },
-        {
-            "id": 2,
-            "name": "Calça vermelha",
-            "price": 90
-        },
-        {
-            "id": 3,
-            "name": "Boné aba reta",
-            "price": 29.9
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "id": 4,
+      "name": "Calçao Jeans",
+      "price": 89.9
+    },
+    {
+      "id": "34e5"
+    },
+    {
+      "id": "b037"
+    },
+    {
+      "id": "67ca"
+    },
+    {
+      "id": "7031"
+    },
+    {
+      "id": "f803"
+    },
+    {
+      "id": "8ce0"
+    },
+    {
+      "id": "33d3"
+    },
+    {
+      "id": "a32f"
+    },
+    {
+      "id": "d11a"
+    },
+    {
+      "id": "31c5"
+    },
+    {
+      "id": "0696"
+    },
+    {
+      "id": "ca9f",
+      "name": "Bermuda",
+      "price": "50"
+    },
+    {
+      "id": "132c",
+      "name": "Tenis",
+      "price": "89.90"
+    }
+  ]
 }
