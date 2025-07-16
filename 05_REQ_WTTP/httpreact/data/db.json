@@ -1,22 +1,22 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Camisa",
       "price": 59.9
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Calça vermelha",
       "price": 90
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Boné aba reta",
       "price": 29.9
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Calçao Jeans",
       "price": 89.9
     },
@@ -87,6 +87,61 @@
       "id": "4faf",
       "name": "Headset",
       "price": "150"
+    },
+    {
+      "id": "6a06",
+      "name": "Monitor",
+      "price": "129"
+    },
+    {
+      "id": "f804",
+      "name": "Chinelo",
+      "price": "120"
+    },
+    {
+      "id": "d918",
+      "name": "Cueca",
+      "price": "110"
+    },
+    {
+      "id": "004b",
+      "name": "Calcinha",
+      "price": "14.90"
+    },
+    {
+      "id": "2abb",
+      "name": "TV",
+      "price": "1500"
+    },
+    {
+      "id": "ce6e",
+      "name": "Roda",
+      "price": "1650"
+    },
+    {
+      "id": "fefd",
+      "name": "Suco",
+      "price": "14.99"
+    },
+    {
+      "id": "50d7",
+      "name": "Suporte Monitor",
+      "price": "68.00"
+    },
+    {
+      "id": "7554",
+      "name": "Suporte Mouse",
+      "price": "14"
+    },
+    {
+      "id": "47e4",
+      "name": "HD",
+      "price": "120"
+    },
+    {
+      "id": "f05f",
+      "name": "Suporte Headset",
+      "price": "10"
     }
   ]
 }

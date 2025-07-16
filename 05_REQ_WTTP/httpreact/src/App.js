@@ -3,19 +3,19 @@ import { useState, useEffect } from "react";
 
 // 4 - custom hook
 import { useFetch } from "./hooks/useFetch";
+//import { useFetch } from "./hooks/useFetch";
 const url = "http://localhost:3000/products";
 
 function App() {
   const [products, setProducts] = useState([]);
 
   //4 - custom hook
-
-  const { data: items } = useFetch(url);
+  const { data: items, httpConfig, loading, error } = useFetch(url);
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
 
-  // 1 - Resgatando Dados
+  // 1 - resgatando dados
   /* useEffect(() => {
     async function fetchData() {
       const res = await fetch(url);
@@ -24,10 +24,11 @@ function App() {
 
       setProducts(data);
     }
-    fetchData();
-  }, []);  */
 
-  // 2 - add de produtos
+    fetchData();
+  }, []); */
+
+  // 2 - Adição de produtos
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -35,7 +36,7 @@ function App() {
       name,
       price,
     };
-    const res = await fetch(url, {
+    /*   const res = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,25 +44,32 @@ function App() {
       body: JSON.stringify(product),
     });
 
-    // 3 - Carragamento Dinâmico
-    const addedProducts = await res.json();
+    // 3 - carregamento dinâmico
+    const addedProduct = await res.json();
+    setProducts((prevProducts) => [...prevProducts, addedProduct]); */
 
-    setProducts((prevProducts) => [...prevProducts, addedProducts]);
-
+    // 5 - refatorando POST
+    httpConfig(product, "POST");
     setName("");
     setPrice("");
   };
+
   return (
     <div className="App">
       <h1>Lista de Produtos</h1>
-      <ul>
-        {items &&
-          items.map((product) => (
-            <li key={product.id}>
-              {product.name} - R${product.price}
-            </li>
-          ))}
-      </ul>
+      {/*6 - loading */}
+      {loading && <p>Carregando Dados...</p>}
+      {error && <p>{error}</p>}
+      {!error && (
+        <ul>
+          {items &&
+            items.map((product) => (
+              <li key={product.id}>
+                {product.name} - R$: {product.price}
+              </li>
+            ))}
+        </ul>
+      )}
       <div className="add-product">
         <form onSubmit={handleSubmit}>
           <label>
@@ -72,9 +80,7 @@ function App() {
               name="name"
               onChange={(e) => setName(e.target.value)}
             />
-          </label>
-          <label>
-            Price:
+            Preço:
             <input
               type="number"
               value={price}
@@ -82,7 +88,9 @@ function App() {
               onChange={(e) => setPrice(e.target.value)}
             />
           </label>
-          <input type="submit" value="Criar" />
+          {/* 7 - State de loading no post*/}
+          {loading && <input type="Submit" disabled value="Aguarde.." />}
+          {!loading && <input type="Submit" value="Criar" />}
         </form>
       </div>
     </div>
