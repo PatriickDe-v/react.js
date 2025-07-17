@@ -3,6 +3,7 @@ import "./App.css";
 // pages
 import Home from "./pages/Home";
 import About from "./pages/About";
+import NotFound from "./pages/NotFound";
 
 // components
 import Navbar from "./components/navbar";
@@ -25,7 +26,10 @@ function App() {
           <Route path="/about" element={<About />} />
           {/* Rota dinâmica*/}
           <Route path="/products/:id" element={<Product />} />
+          {/* neste route */}
           <Route path="/products/:id/info" element={<Info />} />
+          {/* no match route*/}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
