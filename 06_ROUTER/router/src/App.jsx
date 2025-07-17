@@ -10,6 +10,7 @@ import Product from "./pages/Product";
 
 // 1 - Configurando react router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Info from "./pages/Info";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +25,7 @@ function App() {
           <Route path="/about" element={<About />} />
           {/* Rota dinâmica*/}
           <Route path="/products/:id" element={<Product />} />
+          <Route path="/products/:id/info" element={<Info />} />
         </Routes>
       </BrowserRouter>
     </>
