@@ -12,6 +12,8 @@ import Product from "./pages/Product";
 // 1 - Configurando react router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Info from "./pages/Info";
+import SearchForm from "./components/SearchForm";
+import Search from "./pages/Search";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +23,8 @@ function App() {
       <h1>React Router</h1>
       <BrowserRouter>
         <Navbar />
+        {/* 9 - search*/}
+        <SearchForm />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -28,6 +32,8 @@ function App() {
           <Route path="/products/:id" element={<Product />} />
           {/* neste route */}
           <Route path="/products/:id/info" element={<Info />} />
+          {/* 9 - Search*/}
+          <Route path="/search" element={<Search />} />
           {/* no match route*/}
           <Route path="*" element={<NotFound />} />
         </Routes>
