@@ -10,7 +10,7 @@ import Navbar from "./components/navbar";
 import Product from "./pages/Product";
 
 // 1 - Configurando react router
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Info from "./pages/Info";
 import SearchForm from "./components/SearchForm";
 import Search from "./pages/Search";
@@ -34,6 +34,8 @@ function App() {
           <Route path="/products/:id/info" element={<Info />} />
           {/* 9 - Search*/}
           <Route path="/search" element={<Search />} />
+          {/* 10 - redirect*/}
+          <Route path="/company" element={<Navigate to="/about" />} />
           {/* no match route*/}
           <Route path="*" element={<NotFound />} />
         </Routes>
